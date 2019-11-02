@@ -1,0 +1,51 @@
+// INCLUDES STRIPPING STYLES
+// INCLUDES FONTS, SIZES AND MAIN COLORS
+
+body, h1, h2, h3, ul, nav, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+$secondaryColor: #FFD300; 
+// SUNFLOWER YELLOW
+
+$primaryColor: white;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    color: $primaryColor;
+    font-size: 2rem;
+}
+
+$primary-background: #2B331B;
+
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+}
+
+.wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.blog-wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+}

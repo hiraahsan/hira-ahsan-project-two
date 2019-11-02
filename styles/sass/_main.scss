@@ -1,0 +1,7 @@
+.info, .gift, .nature {
+    background-color: $primary-background;
+}
+
+.yummy, .gallery {
+    background-color: darken($primary-background, 5%);
+}

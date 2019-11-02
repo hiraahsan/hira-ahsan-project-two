@@ -1,0 +1,45 @@
+.main {
+    background-image: url(../assets/home-header.jpg);
+    background-size: cover;
+    height: 90vh;
+    background-position: center;
+
+}
+
+.contact {
+    background-image: url(../assets/contact-header.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+}
+
+.blog-header {
+    background-image: url(../assets/blog-header.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+
+}
+
+header {
+    position: relative;
+    nav {
+        padding-top: 3%;
+        ul {
+            display: flex;
+            justify-content: space-around;
+            width: 40%;
+
+            li {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.home-image-overlay {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    width: 50%;
+}
