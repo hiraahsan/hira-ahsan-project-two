@@ -1,6 +1,10 @@
 // INCLUDES STRIPPING STYLES
 // INCLUDES FONTS, SIZES AND MAIN COLORS
 
+* {
+    border: 1px solid red;
+}
+
 body, h1, h2, h3, ul, nav, li, p {
     margin: 0;
     padding: 0;

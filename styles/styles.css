@@ -179,6 +179,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
+* {
+  border: 1px solid red;
+}
+
 body, h1, h2, h3, ul, nav, li, p {
   margin: 0;
   padding: 0;
@@ -351,28 +355,55 @@ header nav ul li:hover {
 }
 
 .yummy-burger {
-  padding: 5% 0;
+  padding-top: 5%;
+}
+
+.yummy-burger .something-new-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.yummy-burger .something-new-section .something-new {
+  width: 38%;
+  margin: 0 6%;
+}
+
+.yummy-burger .something-new-section .something-new-image {
+  width: 50%;
+}
+
+.yummy-burger .something-new-section .something-new-image img {
+  display: block;
+  -webkit-box-shadow: -35px 35px 0 -20px #FFD300;
+          box-shadow: -35px 35px 0 -20px #FFD300;
 }
 
 .yummy {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .yummy .burgers {
-  width: 45%;
-  margin-left: 5%;
+  width: 38%;
+  margin: 0 6%;
+}
+
+.yummy .burgers h2, .yummy .burgers p, .yummy .burgers .read-more {
+  margin: 3% 0;
 }
 
 .yummy .burger-image {
-  position: relative;
-  display: inline;
+  width: 50%;
 }
 
 .yummy .burger-image img {
   display: block;
-  -webkit-transform: translateY(-30%);
-          transform: translateY(-30%);
+  -webkit-transform: translateY(-35%) translateX(0);
+          transform: translateY(-35%) translateX(0);
   -webkit-box-shadow: 35px 35px 0 -20px #FFD300;
           box-shadow: 35px 35px 0 -20px #FFD300;
 }
@@ -384,6 +415,29 @@ header nav ul li:hover {
 
 label {
   display: none;
+}
+
+.nature .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 4% 0;
+}
+
+.nature .wrapper .nature-image {
+  width: 30%;
+}
+
+.nature .wrapper .nature-image img {
+  -webkit-box-shadow: -35px 35px 0 -15px #FFD300;
+          box-shadow: -35px 35px 0 -15px #FFD300;
+}
+
+.nature .wrapper .nature-text {
+  width: 70%;
 }
 
 .contact-form {
@@ -470,4 +524,9 @@ label {
 .blog-main #blog-name {
   border: none;
   border-bottom: 4px solid #FFD300;
+}
+
+footer {
+  background: #171B0E;
+  text-align: center;
 }
