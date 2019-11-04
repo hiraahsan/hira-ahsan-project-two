@@ -36,6 +36,8 @@ body {
 
 $primary-background: #2B331B;
 
+$primary-black: #171B0E;
+
 h1, h2, h3, h4 {
     text-transform: uppercase;
 }
@@ -48,4 +50,9 @@ h1, h2, h3, h4 {
 .blog-wrapper {
     max-width: 90%;
     margin: 0 auto;
+}
+
+h2 {
+    font-size: 4.5rem;
+    font-weight: normal;
 }

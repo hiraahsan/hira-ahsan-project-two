@@ -2,6 +2,306 @@
     background-color: $primary-background;
 }
 
-.yummy, .gallery {
+.yummy-burger, .gallery {
     background-color: darken($primary-background, 5%);
+}
+
+.info {
+    padding-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    // float: left;
+    // width: 50%;
+    .location, .blog, .community, .get-in-touch {
+        // display: flex;
+        width: 50%;
+        padding: 5% 1%;
+        margin-bottom: 10%;
+    }
+    i {
+        background-color: $secondaryColor;
+        border-radius: 50% 50%;
+        width: 40px;
+        height: 40px;
+        color: black;
+        float: left;
+        text-align: center;
+        line-height: 1.8;
+        // is this the correct way to center this?
+        // display: flex;
+        // display: inline;
+        // border: 1px solid black;
+        // width: 3%;
+    }
+}
+
+.gallery {
+    display: flex;
+    // justify-content: space-around;
+    img {
+        padding: 2%;
+    }
+
+}
+
+.read-more {
+    background: $secondaryColor;
+    padding: 1% 2%;
+    color: black;
+    text-transform: uppercase;
+}
+
+// .yummy {
+//     position: relative;
+//     .burger-image {
+//         position: absolute;
+//         top: -50px;
+//         left: -10%;
+//         background: $secondaryColor;
+//         background-size: cover;
+//         background-position: right bottom;
+        // transform: translateX(-50px);
+        // border: 5px solid $secondaryColor;
+        // border-left: none;
+        // border-bottom-width: 80%;
+        // .burger-background {
+            // fill: $secondaryColor;
+            // width: 100%;
+//         }
+
+//         img {
+
+//         }
+//     }
+
+//     .burgers {
+//         padding-top: 50%;
+//     }
+// }
+
+.yummy-burger {
+    padding: 5% 0;
+}
+
+.yummy {
+    display: grid;
+    // position: relative;
+    // height: auto;
+    .burgers {
+        // display: inline;
+            // float: left;
+            width: 45%;
+            margin-left: 5%;
+        }
+    .burger-image {
+        // background-image: url(../assets/left-image.jpg);
+        // background-size: contain;
+        // background-repeat: no-repeat;;
+        position: relative;
+        display: inline;
+        // float: left;
+        // width: 100%;
+        // border-bottom: 10px $secondaryColor solid;
+        // height: 50vh;
+
+        // top: 0;
+        // z-index: 10;
+        // display: none;
+
+        img {
+            // z-index: -1;
+            // transform: translateX(-10%) translateY(-10%);
+            display: block;
+            transform: translateY(-30%);;
+            // position: absolute;
+            box-shadow: 35px 35px 0 -20px $secondaryColor;
+        }
+
+        
+
+        // .burger-background {
+            // background: $secondaryColor;
+            // width: 100%;
+            // height: 100%;
+            // z-index: 1;
+            // position: absolute;
+            // left: 0;
+            // top: 0;
+            // height: 220px;
+            // width: 300px;
+            
+        // }
+    }
+}
+
+
+// .yummy {
+//     display: grid;
+//     grid-template-columns: repeat(7, 1fr);
+//     grid-template-rows: repeat(4, 25%);
+
+//     position: relative;
+//     padding: 10% 0;
+    
+//     .burger-image {
+
+//         grid-column: 1 / 4;
+//         grid-row-end: 1;
+//         width: 100%;
+//         position: absolute;
+//         top: -10%;
+//         left: 0;
+//     }
+
+//     .burgers {
+//         grid-column: 4 / 8;
+//     }
+
+//     .something-new {
+//         grid-row: 3 / 5;
+//         grid-column: -8 / -5;
+//         margin-top: 10%;
+//     }
+// }
+
+.gift {
+    text-align: center;
+    padding: 5% 0;
+}
+
+label {
+    display: none;
+    
+
+}
+
+// fieldset {
+//     background: $primary-background;
+//     width: 50%;
+//     height: 500px;
+// }
+
+.contact-form {
+    background: $primary-background;
+    display: flex;
+    justify-content: space-around;
+    i {
+        color: $secondaryColor;
+    }
+
+    fieldset {
+        background: darken($primary-background, 10%);
+        width: 50%;
+        // outline-style: none;
+        border: none;
+    }
+
+    input[name="name"] {
+        width: 100%;
+    }
+}
+
+.blog-wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.blog-main {
+    background: $primary-background;
+        position: relative;
+        display: flex;
+        padding-top: 10%;
+
+        // .employment {
+        //     position: relative;
+        //     &::after {
+        //         content:'';
+        //         position: absolute;
+        //     }
+
+        // }
+
+    .employment-text {
+        margin-top: 40%;
+        width: 100%;
+    }
+
+    .employment-image {
+        position: absolute;
+        top: -30%;
+        right: 0;
+        background: $secondaryColor;
+        // width: calc(70% - 25px);
+        display: inline-block;
+
+        img {
+            display: block;
+              box-shadow: -35px 35px 0 -20px $secondaryColor;
+        }
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     width: 100%;
+        //     height: 100%;
+        //     border: 10px solid $secondaryColor;
+        //     right: 30px;
+        //     top: -30px;
+        //     z-index: -1;
+
+        // }
+
+        // img {
+        //     transform: translateX(25px) translateY(-15px);
+        //     border: 10px solid $primary-background;offset: 10px;
+    }
+
+    .featured-aside {
+        // width: 50%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-right: 3%;
+                    background: $primary-black;
+                    // position: relative;
+
+        .featured-image {
+            // position: absolute;
+            // position: relative;
+            // margin-bottom: 5%;
+            img {
+                transform: translateX(0) translateY(-40px);
+                // position: relative;
+            // position: absolute;
+            // top: 50px;
+            // left: 0;
+            // right: 0;
+            // bottom: 0;
+            // margin-bottom: 5%;
+        }}
+
+        .featured {
+            // margin-top: 100px;
+            // padding-top: 200px;
+        h3 {
+            // margin-top: 100px;
+            // position: relative;
+            font-weight: normal;
+            color: $secondaryColor;
+        }
+
+
+    }}
+
+    .part-two {
+        width: 70%;
+    }
+    fieldset {
+        border: none;
+    }
+
+    #blog-name {
+
+        border: none;
+        border-bottom: 4px solid $secondaryColor;
+    }
 }
