@@ -1,8 +1,8 @@
 .main {
     background-image: url(../assets/home-header.jpg);
     background-size: cover;
-    // min-height: 100%;
-    height: 90vh;
+    min-height: 100%;
+    height: 75vh;
     background-position: center;
 
     h1 {
@@ -12,9 +12,22 @@
         margin-top: 5%;
         padding-left: 1%;
         padding-top: 1%;
+
+        // @media (max-width: 900px) {
+        //     width: 100%;   
+        //     text-align: center; 
+        //     background-color: black;  
+        //     display: inline; 
+        //     margin: 0 auto;
+        //         }
         .restaurant {
+
             color: black;
             background-color:white;
+            // @media (max-width: 900px) {
+            //     background: black;
+            //     color: white;
+            // }
             // padding: 1% 1%;
             // padding-bottom: 0;
             // text-align: center;
@@ -26,15 +39,15 @@
 .contact {
     background-image: url(../assets/contact-header.jpg);
     background-size: cover;
-    height: 100vh;
-    background-position: center;
+    height: 75vh;
+    background-position: center right;
 }
 
 .blog-header {
     background-image: url(../assets/blog-header.jpg);
     background-size: cover;
-    height: 100vh;
-    background-position: center;
+    height: 75vh;
+    background-position: center right;
 
 }
 
@@ -51,10 +64,23 @@ header {
             justify-content: space-around;
             width: 40%;
 
+            @media (max-width: 900px) {
+                width: 100%;
+                // align-items: center;
+                justify-content: space-evenly;
+                }
+
             li {
                 padding: 10px 0;
+
+                
+
                 &:hover {
                     border-bottom: 2px solid $secondaryColor;
+                }
+
+                a {
+                    text-shadow: 2px 2px 0 black;
                 }
             }
         }
@@ -67,7 +93,13 @@ header {
     right: 0;
     width: 50%;
     // position: sticky;
-    img {
-        // position: sticky;
-    }
+    // img {
+    //     // position: sticky;
+    // }
+
+      @media (max-width: 1200px) {
+        width: 40%;
+        top: 60%;
+        // bottom: 10%;
+    };
 }

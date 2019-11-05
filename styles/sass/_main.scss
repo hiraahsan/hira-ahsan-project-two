@@ -6,6 +6,18 @@
     background-color: darken($primary-background, 5%);
 }
 
+.full-image {
+    img {
+        display: block;
+    }
+}
+
+.find-out-more {
+    background: $primary-black;
+    padding: 1% 3%;
+    text-transform: uppercase;
+}
+
 .info {
     padding-top: 5%;
     display: flex;
@@ -13,11 +25,28 @@
     align-content: space-around;
     // float: left;
     // width: 50%;
+    // p {
+        // padding-left: 10%;
+    // }
+
     .location, .blog, .community, .get-in-touch {
-        // display: flex;
+        display: flex;
         width: 50%;
         padding: 5% 1%;
         margin-bottom: 10%;
+
+        @media (max-width:800px) {
+            width: 100%;
+            margin-bottom: 5%;
+            padding: 2% 0;
+            
+        }
+    }
+
+    .get-in-touch {
+        @media (max-width:800px) {
+            margin-bottom: 10%;
+        }
     }
     i {
         background-color: $secondaryColor;
@@ -28,6 +57,8 @@
         float: left;
         text-align: center;
         line-height: 1.8;
+        margin-right: 3%;
+        flex-shrink: 0;
         // is this the correct way to center this?
         // display: flex;
         // display: inline;
@@ -36,7 +67,7 @@
     }
 }
 
-.gallery {
+.gallery .wrapper {
     display: flex;
     // justify-content: space-around;
     img {
@@ -85,9 +116,20 @@
 
     .something-new-section {
         display: flex;
+        text-align: right;
+        justify-content: space-between;
+        
+        h2 {
+            margin-top: 5%;
+        }
+        
+        p, .read-more {
+                margin: 3% 0;
+            }
     .something-new {
         width: 38%;
-        margin: 0 6%;
+        margin-left: 3%;
+            margin-right: 9%;
     }
 
     .something-new-image {
@@ -105,12 +147,14 @@
     display: flex;
     // position: relative;
     // height: auto;
-    justify-content: space-around;
+    justify-content: space-between;
     .burgers {
         // display: inline;
             // float: left;
             width: 38%;
-            margin: 0 6%;
+            margin-left: 9%;
+            margin-right: 3%;
+            // margin: 0 6%;
             // padding: 10% 0;
             h2, p, .read-more {
                 margin: 3% 0;
@@ -185,6 +229,14 @@
 .gift {
     text-align: center;
     padding: 5% 0;
+
+    h2 {
+        color: $secondaryColor;
+    }
+
+    h2, p {
+        margin: 3% 0;
+    }
 }
 
 label {
@@ -198,159 +250,34 @@ label {
     justify-content: space-evenly;
     padding: 4% 0;
 
+    h2 {
+        color: $secondaryColor;
+
+    }
+
+    h2, p {
+        margin: 3% 0;
+    }
+
     .nature-image {
         width: 30%;
+
         img {
-                        box-shadow: -35px 35px 0 -15px $secondaryColor;
+            box-shadow: -35px 35px 0 -15px $secondaryColor;
 
         }
-                    // box-shadow: 35px 35px 0 -20px $secondaryColor;
-
-        // display: block;
     }
 
     .nature-text {
-        width: 70%;
-    }
-}
-
-// fieldset {
-//     background: $primary-background;
-//     width: 50%;
-//     height: 500px;
-// }
-
-// CONTACT STYLES //
-
-.contact-form {
-    background: $primary-background;
-    display: flex;
-    justify-content: space-around;
-    i {
-        color: $secondaryColor;
-    }
-
-    fieldset {
-        background: darken($primary-background, 10%);
-        width: 50%;
-        // outline-style: none;
-        border: none;
-    }
-
-    input[name="name"] {
-        width: 100%;
-    }
-}
-
-// BLOG STYLES
-
-.blog-wrapper {
-    max-width: 90%;
-    margin: 0 auto;
-}
-
-.blog-main {
-    background: $primary-background;
-        position: relative;
-        display: flex;
-        padding-top: 10%;
-
-        // .employment {
-        //     position: relative;
-        //     &::after {
-        //         content:'';
-        //         position: absolute;
-        //     }
-
-        // }
-
-    .employment-text {
-        margin-top: 40%;
-        width: 100%;
-    }
-
-    .employment-image {
-        position: absolute;
-        top: -30%;
-        right: 0;
-        background: $secondaryColor;
-        // width: calc(70% - 25px);
-        display: inline-block;
-
-        img {
-            display: block;
-              box-shadow: -35px 35px 0 -20px $secondaryColor;
-        }
-        // &::after {
-        //     content: '';
-        //     position: absolute;
-        //     width: 100%;
-        //     height: 100%;
-        //     border: 10px solid $secondaryColor;
-        //     right: 30px;
-        //     top: -30px;
-        //     z-index: -1;
-
-        // }
-
-        // img {
-        //     transform: translateX(25px) translateY(-15px);
-        //     border: 10px solid $primary-background;offset: 10px;
-    }
-
-
-
-    .featured-aside {
-        // width: 50%;
+        width: 65%;
         margin-left: 5%;
-        margin-right: 5%;
-        padding-right: 3%;
-                    background: $primary-black;
-                    // position: relative;
-
-        .featured-image {
-            // position: absolute;
-            // position: relative;
-            // margin-bottom: 5%;
-            img {
-                transform: translateX(0) translateY(-40px);
-                // position: relative;
-            // position: absolute;
-            // top: 50px;
-            // left: 0;
-            // right: 0;
-            // bottom: 0;
-            // margin-bottom: 5%;
-        }}
-
-        .featured {
-            // margin-top: 100px;
-            // padding-top: 200px;
-        h3 {
-            // margin-top: 100px;
-            // position: relative;
-            font-weight: normal;
-            color: $secondaryColor;
-        }
-
-
-    }}
-
-    .part-two {
-        width: 70%;
-    }
-    fieldset {
-        border: none;
-    }
-
-    #blog-name {
-
-        border: none;
-        border-bottom: 4px solid $secondaryColor;
     }
 }
+
+
 
 footer {
     background: $primary-black;
     text-align: center;
+    padding: 1% 0;
 }

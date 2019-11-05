@@ -22,18 +22,26 @@
         <h1>blog</h1>
         </div>
     </header>
-    <main class="blog-main">
+    <main>
+        <div class="featured-image">
+            <img src="./assets/blog-side-image.jpg" alt="">
+        </div>
+        <div class="blog-main">
         <div class="featured-aside">
         <aside>
-            <div class="featured-image">
-                <img src="./assets/blog-side-image.jpg" alt="">
-            </div>
+        
             <div class="blog-wrapper">
 
             <div class="featured">
                 <h3>Feature Restaurants</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias quos sed magni?</p>
                 <h3>recent posts</h3>
+                <ul>
+                    <li>Hodor. Hodor hodor, hodor.</li>
+                    <li>Hodor! Hodor hodor, hodor.</li>
+                    <li>HODOR! Hodor hodor... Hodor.</li>
+                    <li>Hodor, hodor. Hodor...hodor.</li>
+                </ul>
                 <!-- Insert bullet points below -->
             </div>  
             </aside>
@@ -56,14 +64,29 @@
             </div>
         </section>
         <section>
-            <div class="comments">
-                <h3>
-                    comments
-                </h3>
-                <div class="comments-2">
-
+                <div class="comments-section">
+                    <h2>Comments</h2>
+                    <div class="comments1">
+                        <div class="comment-image-1"><img src="./assets/comment-1.jpg" alt="">
+                        </div>
+                        <div class="comment-text-1">
+                            <span class="date-name">Tuesday October 9th, 2019 by Ali</span>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, veritatis distinctio! Itaque enim veniam
+                                nesciunt magni. Consectetur reprehenderit ut ratione minus praesentium error sunt. Tempora ut sunt
+                                numquam minus porro.</p>
+                        </div>
+                    </div>
+                    <div class="comments2">
+                        <div class="comment-image-2">
+                            <img src="./assets/comment-2.jpg" alt="">
+                        </div>
+                        <div class="comment-text-2">
+                            <span class="date-name">Tuesday October 9th, 2019 by Ali</span>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa optio velit commodi sed iste cupiditate
+                                minima nostrum deserunt ab. Excepturi?</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
         </section>
         <section class="blog-form">
             <form action="">
@@ -73,13 +96,20 @@
 
                     <label for="email">Email Address</label>
                     <input type="email" name="email" id="blog-email" placeholder="Email Address">
+
+
                     <label for="comment">Comment</label>
-                    <input type="text" name="comment" id="comment" placeholder="Comment">
+                    <!-- <input type="text" name="comment" id="comment" placeholder="Comment"> -->
+                    <textarea name="comment" placeholder="Comment" id="comment" cols="30" rows="10"></textarea>
+
+
+                    
                     <label for="post">Post Comment</label>
                     <input type="submit" value="Post Comment" name="post" id="post">
                 </fieldset>
             </form>
         </section>
+        </div>
         </div>
         </div>
         </div>

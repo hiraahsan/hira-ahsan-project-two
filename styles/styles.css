@@ -233,7 +233,8 @@ h2 {
 .main {
   background-image: url(../assets/home-header.jpg);
   background-size: cover;
-  height: 90vh;
+  min-height: 100%;
+  height: 75vh;
   background-position: center;
 }
 
@@ -254,15 +255,15 @@ h2 {
 .contact {
   background-image: url(../assets/contact-header.jpg);
   background-size: cover;
-  height: 100vh;
-  background-position: center;
+  height: 75vh;
+  background-position: center right;
 }
 
 .blog-header {
   background-image: url(../assets/blog-header.jpg);
   background-size: cover;
-  height: 100vh;
-  background-position: center;
+  height: 75vh;
+  background-position: center right;
 }
 
 header {
@@ -286,12 +287,25 @@ header nav ul {
   width: 40%;
 }
 
+@media (max-width: 900px) {
+  header nav ul {
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
 header nav ul li {
   padding: 10px 0;
 }
 
 header nav ul li:hover {
   border-bottom: 2px solid #FFD300;
+}
+
+header nav ul li a {
+  text-shadow: 2px 2px 0 black;
 }
 
 .home-image-overlay {
@@ -301,12 +315,29 @@ header nav ul li:hover {
   width: 50%;
 }
 
+@media (max-width: 1200px) {
+  .home-image-overlay {
+    width: 40%;
+    top: 60%;
+  }
+}
+
 .info, .gift, .nature {
   background-color: #2B331B;
 }
 
 .yummy-burger, .gallery {
   background-color: #1d2212;
+}
+
+.full-image img {
+  display: block;
+}
+
+.find-out-more {
+  background: #171B0E;
+  padding: 1% 3%;
+  text-transform: uppercase;
 }
 
 .info {
@@ -321,9 +352,26 @@ header nav ul li:hover {
 }
 
 .info .location, .info .blog, .info .community, .info .get-in-touch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 50%;
   padding: 5% 1%;
   margin-bottom: 10%;
+}
+
+@media (max-width: 800px) {
+  .info .location, .info .blog, .info .community, .info .get-in-touch {
+    width: 100%;
+    margin-bottom: 5%;
+    padding: 2% 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .info .get-in-touch {
+    margin-bottom: 10%;
+  }
 }
 
 .info i {
@@ -335,15 +383,18 @@ header nav ul li:hover {
   float: left;
   text-align: center;
   line-height: 1.8;
+  margin-right: 3%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
-.gallery {
+.gallery .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.gallery img {
+.gallery .wrapper img {
   padding: 2%;
 }
 
@@ -362,11 +413,24 @@ header nav ul li:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: right;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.yummy-burger .something-new-section h2 {
+  margin-top: 5%;
+}
+
+.yummy-burger .something-new-section p, .yummy-burger .something-new-section .read-more {
+  margin: 3% 0;
 }
 
 .yummy-burger .something-new-section .something-new {
   width: 38%;
-  margin: 0 6%;
+  margin-left: 3%;
+  margin-right: 9%;
 }
 
 .yummy-burger .something-new-section .something-new-image {
@@ -383,13 +447,15 @@ header nav ul li:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .yummy .burgers {
   width: 38%;
-  margin: 0 6%;
+  margin-left: 9%;
+  margin-right: 3%;
 }
 
 .yummy .burgers h2, .yummy .burgers p, .yummy .burgers .read-more {
@@ -413,6 +479,14 @@ header nav ul li:hover {
   padding: 5% 0;
 }
 
+.gift h2 {
+  color: #FFD300;
+}
+
+.gift h2, .gift p {
+  margin: 3% 0;
+}
+
 label {
   display: none;
 }
@@ -427,6 +501,14 @@ label {
   padding: 4% 0;
 }
 
+.nature .wrapper h2 {
+  color: #FFD300;
+}
+
+.nature .wrapper h2, .nature .wrapper p {
+  margin: 3% 0;
+}
+
 .nature .wrapper .nature-image {
   width: 30%;
 }
@@ -437,35 +519,14 @@ label {
 }
 
 .nature .wrapper .nature-text {
-  width: 70%;
+  width: 65%;
+  margin-left: 5%;
 }
 
-.contact-form {
-  background: #2B331B;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.contact-form i {
-  color: #FFD300;
-}
-
-.contact-form fieldset {
-  background: #0f1209;
-  width: 50%;
-  border: none;
-}
-
-.contact-form input[name="name"] {
-  width: 100%;
-}
-
-.blog-wrapper {
-  max-width: 90%;
-  margin: 0 auto;
+footer {
+  background: #171B0E;
+  text-align: center;
+  padding: 1% 0;
 }
 
 .blog-main {
@@ -477,20 +538,43 @@ label {
   padding-top: 10%;
 }
 
-.blog-main .employment-text {
-  margin-top: 40%;
-  width: 100%;
+.blog-main .employment {
+  margin-right: 0;
+  padding-left: 10%;
+  border-left: 5px solid #FFD300;
+  border-bottom: 5px solid #FFD300;
 }
 
-.blog-main .employment-image {
+.blog-main .employment .employment-text {
+  margin-top: 40%;
+  width: 100%;
+  padding-top: 5%;
+  padding-right: 7%;
+}
+
+.blog-main .employment .employment-text h2 {
+  color: #FFD300;
+  margin-bottom: 3%;
+}
+
+.blog-main .employment .employment-text .caption {
+  font-weight: bold;
+}
+
+.blog-main .employment .employment-text p {
+  margin: 3% 0;
+}
+
+.blog-main .employment .employment-image {
+  width: 70%;
   position: absolute;
-  top: -30%;
+  top: -12%;
   right: 0;
   background: #FFD300;
   display: inline-block;
 }
 
-.blog-main .employment-image img {
+.blog-main .employment .employment-image img {
   display: block;
   -webkit-box-shadow: -35px 35px 0 -20px #FFD300;
           box-shadow: -35px 35px 0 -20px #FFD300;
@@ -498,23 +582,23 @@ label {
 
 .blog-main .featured-aside {
   margin-left: 5%;
-  margin-right: 5%;
-  padding-right: 3%;
+  margin-right: 4%;
   background: #171B0E;
+  height: 700px;
 }
 
-.blog-main .featured-aside .featured-image img {
-  -webkit-transform: translateX(0) translateY(-40px);
-          transform: translateX(0) translateY(-40px);
+.blog-main .featured-aside .featured {
+  margin-top: 300px;
+}
+
+.blog-main .featured-aside .featured ul li {
+  list-style-type: circle;
+  list-style-position: inside;
 }
 
 .blog-main .featured-aside .featured h3 {
   font-weight: normal;
   color: #FFD300;
-}
-
-.blog-main .part-two {
-  width: 70%;
 }
 
 .blog-main fieldset {
@@ -523,10 +607,259 @@ label {
 
 .blog-main #blog-name {
   border: none;
-  border-bottom: 4px solid #FFD300;
 }
 
-footer {
+.comments-section .date-name {
+  color: #FFD300;
+}
+
+main {
+  position: relative;
+}
+
+.featured-image {
+  position: absolute;
+}
+
+.featured-image img {
+  -webkit-transform: translateX(0) translateY(100px);
+          transform: translateX(0) translateY(100px);
+  width: 75%;
+  z-index: 5;
+}
+
+.comments-section {
+  padding-left: 8%;
+  padding-top: 5%;
+  padding-right: 8%;
+}
+
+.comments-section h2 {
+  margin-bottom: 2%;
+}
+
+.comments-section .comments2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5% 0;
+}
+
+.comments-section .comments2 .comment-image-2 {
+  width: 15%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.comments-section .comments1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.comments-section .comments1 .comment-image-1 {
+  width: 15%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.blog-form fieldset {
+  border: none;
+  padding: 2% 0  0 8%;
+  margin: 0 auto;
+  width: 100%;
+  padding-right: 8%;
+}
+
+.blog-form fieldset #blog-name, .blog-form fieldset #blog-email {
+  background: inherit;
+  color: white;
+  width: 48%;
+  border-bottom: 2px solid #FFD300;
+  margin: 2% 0;
+}
+
+.blog-form fieldset #blog-name::-webkit-input-placeholder, .blog-form fieldset #blog-email::-webkit-input-placeholder {
+  color: white;
+}
+
+.blog-form fieldset #blog-name:-ms-input-placeholder, .blog-form fieldset #blog-email:-ms-input-placeholder {
+  color: white;
+}
+
+.blog-form fieldset #blog-name::-ms-input-placeholder, .blog-form fieldset #blog-email::-ms-input-placeholder {
+  color: white;
+}
+
+.blog-form fieldset #blog-name::placeholder, .blog-form fieldset #blog-email::placeholder {
+  color: white;
+}
+
+.blog-form fieldset #comment {
+  border: none;
+  background: inherit;
+  color: white;
+  border: 2px solid #FFD300;
+  width: 97%;
+  height: 200px;
+  padding: 1.5%;
+}
+
+.blog-form fieldset #comment::-webkit-input-placeholder {
+  color: white;
+}
+
+.blog-form fieldset #comment:-ms-input-placeholder {
+  color: white;
+}
+
+.blog-form fieldset #comment::-ms-input-placeholder {
+  color: white;
+}
+
+.blog-form fieldset #comment::placeholder {
+  color: white;
+}
+
+.blog-form fieldset #post {
+  background: #FFD300;
+  width: 97%;
+  margin: 2% 0;
+  text-transform: uppercase;
+  padding: 1% 0;
+  border: none;
+}
+
+.blog-form fieldset #post:hover {
   background: #171B0E;
-  text-align: center;
+  color: #FFD300;
+}
+
+.contact-form {
+  background: #2B331B;
+  padding: 5% 0 12% 0;
+}
+
+.contact-form i {
+  color: #FFD300;
+}
+
+.contact-form fieldset {
+  background: #171c0f;
+  width: 50%;
+  height: 450px;
+  position: absolute;
+  padding: 4%;
+  top: 60%;
+  right: 5%;
+  border: none;
+  -webkit-box-shadow: 35px 35px 0 -15px #FFD300;
+          box-shadow: 35px 35px 0 -15px #FFD300;
+}
+
+.contact-form input[name="name"] {
+  width: 46%;
+  border: none;
+  margin-bottom: 5%;
+  margin-right: 5%;
+  padding-bottom: 2%;
+  background: #171c0f;
+  color: white;
+  font-weight: normal;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #FFD300;
+}
+
+.contact-form input[name="name"]::-webkit-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.contact-form input[name="name"]:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.contact-form input[name="name"]::-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.contact-form input[name="name"]::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.contact-form input[name="email"] {
+  width: 46%;
+  border: none;
+  margin-bottom: 5%;
+  padding-bottom: 2%;
+  background: #171c0f;
+  color: white;
+  font-weight: normal;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #FFD300;
+}
+
+.contact-form input[name="email"]::-webkit-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.contact-form input[name="email"]:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.contact-form input[name="email"]::-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.contact-form input[name="email"]::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.contact-form #message {
+  color: white;
+  width: 100%;
+  border: none;
+  background: #171c0f;
+  border: 2px solid #FFD300;
+}
+
+.contact-form #message::-webkit-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.contact-form #message:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.contact-form #message::-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.contact-form #message::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.contact-form #submit {
+  border: none;
+  background: #FFD300;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 1% 0;
+  margin: 2% 0;
+}
+
+.contact-form #submit:hover {
+  background: #171B0E;
+  color: #FFD300;
 }
