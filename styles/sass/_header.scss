@@ -40,6 +40,8 @@
 
             color: black;
             background-color:white;
+            padding-top: 4%;
+            // line-height: 20px;
             @media (max-width: 900px) {
                 background-color: transparent;
                 color: $primary-black;
@@ -78,7 +80,9 @@ header {
         font-weight: 700;
         font-size: 2rem;
         line-height: 29px;
-        letter-spacing: 1px;;
+        letter-spacing: 1px;
+        font-family: 'Josefin Sans', sans-serif;
+
 
         
         ul {

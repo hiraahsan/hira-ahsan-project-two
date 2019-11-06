@@ -1,26 +1,5 @@
-@mixin mq-phone {
-  @media (max-width: 600px) { @content; }
-}
-
-// @mixin mq-small-tablet {
-//   @media (min-width: 600px) { @content; }
-// }
-
-@mixin mq-small-tablet {
-  @media (max-width: 900px) { 
-      @content; 
-    }
-}
-
-@mixin large-tablet {
-
-@media (max-width: 1200px) { @content; }
-
-}
-
-@mixin mq-large-desktop {
-  @media (min-width: 1800px) { @content; }
-}
+// ORIGINALLY FOR MIXINS BUT DID NOT END UP USING
+// USED FOR TOGGLE BAR INSTEAD
 
 
 nav .fa-bars {

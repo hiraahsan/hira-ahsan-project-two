@@ -308,6 +308,7 @@ input[type="submit"] {
 .main h1 .restaurant {
   color: black;
   background-color: white;
+  padding-top: 4%;
 }
 
 @media (max-width: 900px) {
@@ -347,6 +348,7 @@ header nav {
   font-size: 2rem;
   line-height: 29px;
   letter-spacing: 1px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 header nav ul {
@@ -457,7 +459,6 @@ header nav ul li a {
 
 .info .location h2, .info .blog h2, .info .community h2, .info .get-in-touch h2 {
   font-size: 4.5rem;
-  line-height: 99.8px;
 }
 
 @media (max-width: 800px) {
@@ -490,7 +491,6 @@ header nav ul li a {
   margin-right: 3%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-top: 4%;
 }
 
 .gallery-images {
@@ -523,6 +523,12 @@ header nav ul li a {
 
 .yummy-burger {
   padding-top: 5%;
+}
+
+.yummy-burger h2 {
+  font-size: 4rem;
+  line-height: 58px;
+  letter-spacing: 1.3px;
 }
 
 @media (max-width: 900px) {
@@ -920,7 +926,14 @@ input[type="checkbox"] {
 
 .blog-main .employment .employment-text h2 {
   color: #FFD300;
-  margin-bottom: 3%;
+  line-height: 99.8px;
+  font-size: 4.5rem;
+}
+
+@media (max-width: 1400px) {
+  .blog-main .employment .employment-text h2 {
+    line-height: 60px;
+  }
 }
 
 .blog-main .employment .employment-text .caption {
@@ -1006,6 +1019,10 @@ input[type="checkbox"] {
 .blog-main .featured-aside .featured h3 {
   font-weight: normal;
   color: #FFD300;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.5rem;
+  line-height: 58px;
+  letter-spacing: 0.8px;
   margin-top: 10%;
   margin-bottom: 5%;
 }
