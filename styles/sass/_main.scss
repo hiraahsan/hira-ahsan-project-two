@@ -4,7 +4,7 @@
     background-color: $primary-background;
 }
 
-.yummy-burger, .gallery {
+.main-section, .gallery {
     background-color: darken($primary-background, 5%);
 }
 
@@ -36,11 +36,7 @@
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
-    // float: left;
-    // width: 50%;
-    // p {
-        // padding-left: 10%;
-    // }
+
 
     .location, .blog, .community, .get-in-touch {
         display: flex;
@@ -80,18 +76,12 @@
         line-height: 1.8;
         margin-right: 3%;
         flex-shrink: 0;
-        // margin-top: 4%;
-        // is this the correct way to center this?
-        // display: flex;
-        // display: inline;
-        // border: 1px solid black;
-        // width: 3%;
+     
     }
 }
 
 .gallery-images {
     display: flex;
-    // justify-content: space-around;
     img {
         padding: 2%;
     }
@@ -118,35 +108,8 @@
     }
 }
 
-// .yummy {
-//     position: relative;
-//     .burger-image {
-//         position: absolute;
-//         top: -50px;
-//         left: -10%;
-//         background: $secondaryColor;
-//         background-size: cover;
-//         background-position: right bottom;
-        // transform: translateX(-50px);
-        // border: 5px solid $secondaryColor;
-        // border-left: none;
-        // border-bottom-width: 80%;
-        // .burger-background {
-            // fill: $secondaryColor;
-            // width: 100%;
-//         }
 
-//         img {
-
-//         }
-//     }
-
-//     .burgers {
-//         padding-top: 50%;
-//     }
-// }
-
-.yummy-burger {
+.main-section {
     padding-top: 5%;
 
     h2 {
@@ -260,22 +223,17 @@
 }
 
 
-.yummy {
+.main-section-div {
     display: flex;
-    // position: relative;
-    // height: auto;
+    
     justify-content: space-between;
                 @media (max-width:900px) {
                     flex-wrap: wrap;
                 }
     .burgers {
-        // display: inline;
-            // float: left;
             width: 38%;
             margin-left: 9%;
             margin-right: 3%;
-            // margin: 0 6%;
-            // padding: 10% 0;
 
             @media (max-width:900px) {
                 width: 100%;
@@ -294,31 +252,24 @@
 
         
     .burger-image {
-        // position: relative;
-        // display: inline;
-        // width: 100%;
-        // height: 50vh;
         width: 50%;
-                        @media (max-width:900px) {
-                        width: 100%;
-                        display: flex;
-                        justify-content: flex-start;
-                        }
-                        @media (max-width:730px) {
-                            justify-content: center;
-                        }
+
+        @media (max-width:900px) {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        }
+        @media (max-width:730px) {
+            justify-content: center;
+        }
 
         img {
-            // z-index: -1;
-            // transform: translateX(-10%) translateY(-10%);
+           
             display: block;
             transform: translateY(-35%) translateX(0);
-            // position: absolute;
             box-shadow: 35px 35px 0 -20px $secondaryColor;
-            // width: 50%;
         
             @media (max-width:900px) {
-                // box-shadow: 0px 0px $secondaryColor;
                 transform: translateY(0);
             }
 
@@ -330,50 +281,10 @@
 
         
 
-        // .burger-background {
-            // background: $secondaryColor;
-            // width: 100%;
-            // height: 100%;
-            // z-index: 1;
-            // position: absolute;
-            // left: 0;
-            // top: 0;
-            // height: 220px;
-            // width: 300px;
-            
-        // }
+       
     }
 }
 
-
-// .yummy {
-//     display: grid;
-//     grid-template-columns: repeat(7, 1fr);
-//     grid-template-rows: repeat(4, 25%);
-
-//     position: relative;
-//     padding: 10% 0;
-    
-//     .burger-image {
-
-//         grid-column: 1 / 4;
-//         grid-row-end: 1;
-//         width: 100%;
-//         position: absolute;
-//         top: -10%;
-//         left: 0;
-//     }
-
-//     .burgers {
-//         grid-column: 4 / 8;
-//     }
-
-//     .something-new {
-//         grid-row: 3 / 5;
-//         grid-column: -8 / -5;
-//         margin-top: 10%;
-//     }
-// }
 }
 
 .gift {
