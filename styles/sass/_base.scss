@@ -1,13 +1,43 @@
 // INCLUDES STRIPPING STYLES
 // INCLUDES FONTS, SIZES AND MAIN COLORS
 
-* {
-    border: 1px solid red;
+// * {
+//     border: 1px solid red;
+// }
+
+body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 2rem;
+
+    @media (max-width:900px) {
+        font-size: 1.8rem;
+    }
+
+    @media (max-width:600px) {
+        font-size: 1.6rem;
+    }
+    // line-height: 28px;
+    // letter-spacing: 1px;
+
+}
+
+a {
+    padding: 2% 0;
+}
+
+p {
+    line-height: 28px;
+    letter-spacing: 1px;
 }
 
 body, h1, h2, h3, ul, nav, li, p {
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4, .read-more, .find-out-more {
+        font-family: 'Josefin Sans', sans-serif;
+
 }
 
 li {
@@ -33,7 +63,6 @@ html {
 }
 
 body {
-    font-family: 'Josefin Sans', sans-serif;
     color: $primaryColor;
     font-size: 2rem;
 }

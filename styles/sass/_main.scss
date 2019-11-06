@@ -1,3 +1,5 @@
+
+
 .info, .gift, .nature {
     background-color: $primary-background;
 }
@@ -16,6 +18,11 @@
     background: $primary-black;
     padding: 1% 3%;
     text-transform: uppercase;
+
+    &:hover {
+        background: $secondaryColor;
+        color: $primary-black;
+    }
 }
 
 .info {
@@ -67,7 +74,7 @@
     }
 }
 
-.gallery .wrapper {
+.gallery-images {
     display: flex;
     // justify-content: space-around;
     img {
@@ -81,6 +88,11 @@
     padding: 1% 2%;
     color: black;
     text-transform: uppercase;
+
+    &:hover {
+        background: $primary-black;
+        color: $secondaryColor;
+    }
 }
 
 // .yummy {
@@ -118,6 +130,14 @@
         display: flex;
         text-align: right;
         justify-content: space-between;
+
+        @media (max-width: 900px) {
+            flex-wrap: wrap;    
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            // display: block        
+        }
         
         h2 {
             margin-top: 5%;
@@ -130,16 +150,32 @@
         width: 38%;
         margin-left: 3%;
             margin-right: 9%;
+
+            @media (max-width: 900px) {
+                width: 100%;
+                padding: 0;
+                margin: 0 auto;
+            }
     }
 
     .something-new-image {
             // position: relative;
             width: 50%;
+            @media (max-width: 900px) {
+                width: 100%;
+                box-shadow: none;
+                // transform: translateX(0) translateY(0);
+            }
 
             img {
                 display: block;
                 box-shadow: -35px 35px 0 -20px $secondaryColor;
-            }
+                
+                @media (max-width: 900px) {
+                    box-shadow: 0px 0px $secondaryColor;
+                    display: inline-block;
+                    // border: 5px solid $secondaryColor;
+                }
         }
 }}
 
@@ -148,6 +184,9 @@
     // position: relative;
     // height: auto;
     justify-content: space-between;
+                @media (max-width:900px) {
+                    flex-wrap: wrap;
+                }
     .burgers {
         // display: inline;
             // float: left;
@@ -156,6 +195,13 @@
             margin-right: 3%;
             // margin: 0 6%;
             // padding: 10% 0;
+
+            @media (max-width:900px) {
+                width: 100%;
+                padding: 0;
+                margin: 0 auto;
+                text-align: center;
+            }
             h2, p, .read-more {
                 margin: 3% 0;
             }
@@ -168,6 +214,11 @@
         // width: 100%;
         // height: 50vh;
         width: 50%;
+                        @media (max-width:900px) {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        }
 
         img {
             // z-index: -1;
@@ -177,6 +228,11 @@
             // position: absolute;
             box-shadow: 35px 35px 0 -20px $secondaryColor;
             // width: 50%;
+        
+            @media (max-width:900px) {
+                box-shadow: 0px 0px $secondaryColor;
+                transform: translateY(0);
+            }
         }
 
         
@@ -225,6 +281,7 @@
 //         margin-top: 10%;
 //     }
 // }
+}
 
 .gift {
     text-align: center;
@@ -250,6 +307,12 @@ label {
     justify-content: space-evenly;
     padding: 4% 0;
 
+    @media (max-width:900px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+
     h2 {
         color: $secondaryColor;
 
@@ -262,8 +325,18 @@ label {
     .nature-image {
         width: 30%;
 
+        @media (max-width:900px) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
         img {
             box-shadow: -35px 35px 0 -15px $secondaryColor;
+            @media (max-width:900px) {
+                box-shadow: none;
+                // display: inline;
+            }
 
         }
     }
@@ -271,6 +344,11 @@ label {
     .nature-text {
         width: 65%;
         margin-left: 5%;
+        @media (max-width:900px) {
+            margin: 0;
+            width: 100%;
+            text-align: center;
+        }
     }
 }
 
