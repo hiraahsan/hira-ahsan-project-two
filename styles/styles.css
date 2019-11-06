@@ -305,6 +305,12 @@ input[type="submit"] {
   }
 }
 
+@media (max-width: 400px) {
+  .main h1 {
+    font-size: 4.3rem;
+  }
+}
+
 .main h1 .restaurant {
   color: black;
   background-color: white;

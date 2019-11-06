@@ -36,6 +36,11 @@
                     font-size: 5rem;
                     margin-top: 35%;
                 }
+                
+                @media (max-width: 400px) {
+                    font-size: 4.3rem;
+                }
+
         .restaurant {
 
             color: black;
