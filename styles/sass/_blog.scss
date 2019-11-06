@@ -11,6 +11,10 @@
     position: relative;
     display: flex;
     padding-top: 10%;
+
+    @media (max-width:1000px) {
+        flex-wrap: wrap;
+    }
         // padding-left: 5%;
         // width: 100%;
 
@@ -38,6 +42,12 @@
         padding: 25% 10% 5% 5%;
         // padding-left: 5%;
 
+        @media (max-width:1000px) {
+            margin-top: 0;
+            padding-top: 8%;
+        }
+
+
         h2 {
             color: $secondaryColor;
             margin-bottom: 3%;
@@ -62,6 +72,13 @@
         background: $secondaryColor;
         // width: calc(70% - 25px);
         display: inline-block;
+
+         @media (max-width:1000px) {
+             position: relative;
+             right: 50px;
+             width: 100%;
+             margin-top: 5%;
+         }
 
         img {
             display: block;
@@ -95,6 +112,21 @@
         height: 850px;
         // position: relative;
 
+        @media (max-width:1000px) {
+            display: flex;            
+            flex-direction: column;   
+            align-items: center; 
+            text-align: center;
+        }
+
+        .featured-image-2 {
+            display: none;
+
+            @media (max-width:1000px) {
+                display: block;
+                // margin: 0 auto;
+    }
+        }
         
 
         .featured {
@@ -103,6 +135,10 @@
             // height: 400px;
             margin-top: 275px;
             // padding-top: 200px;
+
+            @media (max-width:1000px) {
+                margin-top: 0;
+            }
 
             ul li {
                 list-style-type: circle;
@@ -117,6 +153,10 @@
             color: $secondaryColor;
             margin-top: 10%;
             margin-bottom: 5%;
+
+            @media (max-width:1000px) {
+                margin-top: 3%;
+            }
         }
 
 
@@ -145,11 +185,24 @@ main {
 
 .featured-image {
     position: absolute;
+    flex-shrink: 2;
+        display: flex;
+
+    @media (max-width:1000px) {
+        display: none;
+    }
+
         img {
         transform: translateX(0) translateY(100px);
         max-width: 70%;
+        flex-shrink: 2;
                 // width: 100%;
         z-index: 5;
+
+        @media (max-width:1400px) {
+            max-width: 70%;
+            
+        }
 }}
 
 .comments-section {
