@@ -16,6 +16,15 @@
             align-items: center;
             ;}
 
+            .contact-info {
+
+                @media (max-width:1000px) {
+                    margin-bottom: 50px;
+                    text-align: center;
+                }
+                
+            }
+
     // position: relative;
     // justify-content: space-around;
     i {
@@ -54,6 +63,11 @@
             position: relative;
             box-shadow: 0 0 white;
         }
+
+        @media (max-width:450px) {
+        height: 450px;
+        }
+
     }
 
     input[name="name"] {
@@ -69,6 +83,10 @@
         font-size: 1.6rem;
         border-bottom: 1px solid $secondaryColor;
         padding: 2%;
+
+        @media (max-width:600px) {
+            width: 100%;
+        }
     
 
     &::placeholder {
@@ -89,7 +107,9 @@
         font-size: 1.6rem;
         border-bottom: 1px solid $secondaryColor;
                 padding: 2%;
-
+        @media (max-width:600px) {
+            width: 100%;
+        }
     
 
     &::placeholder {

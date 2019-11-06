@@ -325,11 +325,35 @@ input[type="submit"] {
   background-position: center right;
 }
 
+.contact h1 {
+  padding-left: 2%;
+  padding-top: 5%;
+  text-shadow: 2px 2px #171B0E;
+}
+
 .blog-header {
   background-image: url(../assets/blog-header.jpg);
   background-size: cover;
   height: 75vh;
   background-position: center right;
+}
+
+.blog-header h1 {
+  padding-left: 2%;
+  padding-top: 5%;
+  text-shadow: 2px 2px #171B0E;
+}
+
+@media (max-width: 900px) {
+  .blog-header h1 {
+    padding-top: 20%;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-header h1 {
+    padding-top: 5%;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -835,10 +859,6 @@ footer {
   padding: 1% 0;
 }
 
-nav .fa-bars {
-  display: none;
-}
-
 .menu-toggle a {
   border-bottom: 1px solid grey;
   display: inline-block;
@@ -884,8 +904,19 @@ input[type="checkbox"] {
   right: -30%;
   top: 50px;
   /* height: 100%; */
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: 1s all ease-in-out;
+  transition: 1s all ease-in-out;
+  color: white;
+}
+
+#sidebar li {
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+#sidebar li:hover {
+  background-color: #FFD300;
+  color: #171B0E;
 }
 
 .blog-main {
@@ -941,6 +972,12 @@ input[type="checkbox"] {
 @media (max-width: 1400px) {
   .blog-main .employment .employment-text h2 {
     line-height: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-main .employment .employment-text h2 {
+    font-size: 3.5rem;
   }
 }
 
@@ -1255,6 +1292,13 @@ main {
   }
 }
 
+@media (max-width: 1000px) {
+  .contact-form .contact-info {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}
+
 .contact-form i {
   color: #FFD300;
   font-size: 3rem;
@@ -1295,6 +1339,12 @@ main {
   }
 }
 
+@media (max-width: 450px) {
+  .contact-form fieldset {
+    height: 450px;
+  }
+}
+
 .contact-form input[name="name"] {
   width: 46%;
   border: none;
@@ -1307,6 +1357,12 @@ main {
   font-size: 1.6rem;
   border-bottom: 1px solid #FFD300;
   padding: 2%;
+}
+
+@media (max-width: 600px) {
+  .contact-form input[name="name"] {
+    width: 100%;
+  }
 }
 
 .contact-form input[name="name"]::-webkit-input-placeholder {
@@ -1340,6 +1396,12 @@ main {
   font-size: 1.6rem;
   border-bottom: 1px solid #FFD300;
   padding: 2%;
+}
+
+@media (max-width: 600px) {
+  .contact-form input[name="email"] {
+    width: 100%;
+  }
 }
 
 .contact-form input[name="email"]::-webkit-input-placeholder {

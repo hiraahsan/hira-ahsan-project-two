@@ -2,9 +2,9 @@
 // USED FOR TOGGLE BAR INSTEAD
 
 
-nav .fa-bars {
-    display: none;
-}
+// .fa-bars {
+//     display: none;
+// }
 
 .menu-toggle a {
     border-bottom: 1px solid grey;
@@ -34,13 +34,10 @@ label[for="toggle"] {
     text-shadow: 2px 2px $primary-black;
 
     @media (max-width:600px) {
-          display: block;
+        display: block;
 
     }
   }
-
-
-
 
 
 input[type="checkbox"] {
@@ -56,5 +53,15 @@ input[type="checkbox"] {
     top: 50px;
     // display: flex;
     /* height: 100%; */
-    transition: all 0.5s ease-in-out; 
+    transition: 1s all ease-in-out; 
+    color: white;
+
+    li {
+            transition: 0.5s all ease-in-out; 
+
+        &:hover {
+            background-color: $secondaryColor;
+            color: $primary-black;
+        }
+    }
 }

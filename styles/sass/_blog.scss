@@ -46,6 +46,10 @@
                 @media (max-width: 1400px) {
                     line-height: 60px;
                 }
+
+                @media (max-width:600px) {
+                    font-size: 3.5rem;
+                }
             }
 
             .caption {
