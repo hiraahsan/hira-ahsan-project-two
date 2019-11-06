@@ -47,6 +47,10 @@
         h2 {
         font-size: 4.5rem;
         // line-height: 99.8px;
+
+        @media (max-width: 500px) {
+            font-size: 4rem;
+        }
         }
         
 
