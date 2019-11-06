@@ -409,8 +409,14 @@ header nav ul li a {
 
 .find-out-more {
   background: #171B0E;
-  padding: 1% 3%;
+  padding: 10px 0 5px 0;
   text-transform: uppercase;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+.find-out-more a {
+  padding: 10px 15px 5px 15px;
 }
 
 .find-out-more:hover {
@@ -478,9 +484,15 @@ header nav ul li a {
 
 .read-more {
   background: #FFD300;
-  padding: 1% 2%;
   color: black;
   text-transform: uppercase;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+  padding: 10px 0 5px 0;
+}
+
+.read-more a {
+  padding: 10px 15px 5px 15px;
 }
 
 .read-more:hover {
@@ -490,6 +502,12 @@ header nav ul li a {
 
 .yummy-burger {
   padding-top: 5%;
+}
+
+@media (max-width: 900px) {
+  .yummy-burger {
+    margin: 0 auto;
+  }
 }
 
 .yummy-burger .something-new-section {
@@ -506,9 +524,7 @@ header nav ul li a {
   .yummy-burger .something-new-section {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    text-align: center;
-    padding: 0;
-    margin: 0;
+    margin: 0 5%;
   }
 }
 
@@ -518,6 +534,11 @@ header nav ul li a {
 
 .yummy-burger .something-new-section p, .yummy-burger .something-new-section .read-more {
   margin: 3% 0;
+}
+
+.yummy-burger .something-new-section .read-more {
+  display: inline-block;
+  margin-bottom: 80px;
 }
 
 .yummy-burger .something-new-section .something-new {
@@ -540,9 +561,7 @@ header nav ul li a {
 
 @media (max-width: 900px) {
   .yummy-burger .something-new-section .something-new-image {
-    width: 100%;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    display: none;
   }
 }
 
@@ -552,11 +571,28 @@ header nav ul li a {
           box-shadow: -35px 35px 0 -20px #FFD300;
 }
 
+.yummy-burger .something-new-hidden {
+  display: none;
+}
+
 @media (max-width: 900px) {
-  .yummy-burger .something-new-section .something-new-image img {
-    -webkit-box-shadow: 0px 0px #FFD300;
-            box-shadow: 0px 0px #FFD300;
-    display: inline-block;
+  .yummy-burger .something-new-hidden {
+    display: block;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .yummy-burger .something-new-hidden img {
+    -webkit-box-shadow: -35px 35px 0 -20px #FFD300;
+            box-shadow: -35px 35px 0 -20px #FFD300;
   }
 }
 
@@ -586,8 +622,7 @@ header nav ul li a {
   .yummy-burger .yummy .burgers {
     width: 100%;
     padding: 0;
-    margin: 0 auto;
-    text-align: center;
+    margin: 5% 5%;
   }
 }
 
@@ -605,9 +640,9 @@ header nav ul li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -621,8 +656,6 @@ header nav ul li a {
 
 @media (max-width: 900px) {
   .yummy-burger .yummy .burger-image img {
-    -webkit-box-shadow: 0px 0px #FFD300;
-            box-shadow: 0px 0px #FFD300;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
@@ -687,6 +720,7 @@ label {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 5%;
   }
 }
 
@@ -702,6 +736,11 @@ label {
   }
 }
 
+.nature .wrapper .find-out-more {
+  margin-bottom: 50px;
+  display: inline-block;
+}
+
 .nature .wrapper .nature-text {
   width: 65%;
   margin-left: 5%;
@@ -715,10 +754,69 @@ label {
   }
 }
 
+@media (max-width: 900px) {
+  .bulb-image {
+    display: none;
+  }
+}
+
 footer {
   background: #171B0E;
   text-align: center;
   padding: 1% 0;
+}
+
+nav .fa-bars {
+  display: none;
+}
+
+.menu-toggle a {
+  border-bottom: 1px solid grey;
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+input[type="checkbox"]:checked + #sidebar {
+  right: 0;
+}
+
+.menu-toggle li {
+  padding: 5%;
+}
+
+label[for="toggle"] {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  color: white;
+  z-index: 10;
+  font-size: 40px;
+  text-shadow: 2px 2px #171B0E;
+}
+
+@media (max-width: 600px) {
+  label[for="toggle"] {
+    display: block;
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+#sidebar {
+  background: #171B0E;
+  position: fixed;
+  z-index: 10;
+  width: 30%;
+  right: -30%;
+  top: 50px;
+  /* height: 100%; */
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .blog-main {

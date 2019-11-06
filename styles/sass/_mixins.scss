@@ -21,3 +21,61 @@
 @mixin mq-large-desktop {
   @media (min-width: 1800px) { @content; }
 }
+
+
+nav .fa-bars {
+    display: none;
+}
+
+.menu-toggle a {
+    border-bottom: 1px solid grey;
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+input[type="checkbox"]:checked + #sidebar {
+    right: 0;
+}
+
+.menu-toggle li {
+    padding: 5%;
+}
+
+
+
+label[for="toggle"] {
+    position: fixed;
+    top: 0;
+    right: 10px;
+    color: white;
+    z-index: 10;
+    font-size: 40px;
+    text-shadow: 2px 2px $primary-black;
+
+    @media (max-width:600px) {
+          display: block;
+
+    }
+  }
+
+
+
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+#sidebar {
+    background: $primary-black;
+    position: fixed;
+    z-index: 10;
+    width: 30%; 
+    right: -30%; 
+    top: 50px;
+    // display: flex;
+    /* height: 100%; */
+    transition: all 0.5s ease-in-out; 
+}
